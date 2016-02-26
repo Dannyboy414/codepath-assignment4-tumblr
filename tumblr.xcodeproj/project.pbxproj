@@ -7,6 +7,12 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		7421AF2A1C7FA73000DEBDF4 /* TabViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421AF291C7FA73000DEBDF4 /* TabViewController.swift */; };
+		7421AF2C1C7FA73900DEBDF4 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421AF2B1C7FA73900DEBDF4 /* HomeViewController.swift */; };
+		7421AF2E1C7FA74100DEBDF4 /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421AF2D1C7FA74100DEBDF4 /* SearchViewController.swift */; };
+		7421AF301C7FA74B00DEBDF4 /* AccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421AF2F1C7FA74B00DEBDF4 /* AccountViewController.swift */; };
+		7421AF321C7FA75300DEBDF4 /* TrendingViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421AF311C7FA75300DEBDF4 /* TrendingViewController.swift */; };
+		7421AF341C7FA76900DEBDF4 /* ComposeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7421AF331C7FA76900DEBDF4 /* ComposeViewController.swift */; };
 		74BE300B1C7E3A4F00DF15BB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BE300A1C7E3A4F00DF15BB /* AppDelegate.swift */; };
 		74BE300D1C7E3A4F00DF15BB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 74BE300C1C7E3A4F00DF15BB /* ViewController.swift */; };
 		74BE30101C7E3A4F00DF15BB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 74BE300E1C7E3A4F00DF15BB /* Main.storyboard */; };
@@ -15,6 +21,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		7421AF291C7FA73000DEBDF4 /* TabViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TabViewController.swift; sourceTree = "<group>"; };
+		7421AF2B1C7FA73900DEBDF4 /* HomeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
+		7421AF2D1C7FA74100DEBDF4 /* SearchViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
+		7421AF2F1C7FA74B00DEBDF4 /* AccountViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AccountViewController.swift; sourceTree = "<group>"; };
+		7421AF311C7FA75300DEBDF4 /* TrendingViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TrendingViewController.swift; sourceTree = "<group>"; };
+		7421AF331C7FA76900DEBDF4 /* ComposeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ComposeViewController.swift; sourceTree = "<group>"; };
 		74BE30071C7E3A4F00DF15BB /* tumblr.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tumblr.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		74BE300A1C7E3A4F00DF15BB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		74BE300C1C7E3A4F00DF15BB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -56,6 +68,12 @@
 			children = (
 				74BE300A1C7E3A4F00DF15BB /* AppDelegate.swift */,
 				74BE300C1C7E3A4F00DF15BB /* ViewController.swift */,
+				7421AF291C7FA73000DEBDF4 /* TabViewController.swift */,
+				7421AF2B1C7FA73900DEBDF4 /* HomeViewController.swift */,
+				7421AF2D1C7FA74100DEBDF4 /* SearchViewController.swift */,
+				7421AF331C7FA76900DEBDF4 /* ComposeViewController.swift */,
+				7421AF2F1C7FA74B00DEBDF4 /* AccountViewController.swift */,
+				7421AF311C7FA75300DEBDF4 /* TrendingViewController.swift */,
 				74BE300E1C7E3A4F00DF15BB /* Main.storyboard */,
 				74BE30111C7E3A4F00DF15BB /* Assets.xcassets */,
 				74BE30131C7E3A4F00DF15BB /* LaunchScreen.storyboard */,
@@ -136,8 +154,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				7421AF321C7FA75300DEBDF4 /* TrendingViewController.swift in Sources */,
+				7421AF2E1C7FA74100DEBDF4 /* SearchViewController.swift in Sources */,
+				7421AF2A1C7FA73000DEBDF4 /* TabViewController.swift in Sources */,
+				7421AF341C7FA76900DEBDF4 /* ComposeViewController.swift in Sources */,
+				7421AF301C7FA74B00DEBDF4 /* AccountViewController.swift in Sources */,
 				74BE300D1C7E3A4F00DF15BB /* ViewController.swift in Sources */,
 				74BE300B1C7E3A4F00DF15BB /* AppDelegate.swift in Sources */,
+				7421AF2C1C7FA73900DEBDF4 /* HomeViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -285,6 +309,7 @@
 				74BE301B1C7E3A4F00DF15BB /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
