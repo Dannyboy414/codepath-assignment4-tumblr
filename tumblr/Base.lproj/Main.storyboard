@@ -13,11 +13,6 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="nGl-6D-Mc0" userLabel="Content View">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
-                            </view>
                             <view contentMode="scaleToFill" id="Sdp-3M-IZK" userLabel="Tab Bar View">
                                 <rect key="frame" x="0.0" y="525" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -40,14 +35,6 @@
                                             <action selector="onHomeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B45-vf-bVB"/>
                                         </connections>
                                     </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nFg-s8-DeE" userLabel="Compose Button">
-                                        <rect key="frame" x="135" y="4" width="50" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="compose_button"/>
-                                        <connections>
-                                            <action selector="onComposeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nRr-CX-GOj"/>
-                                        </connections>
-                                    </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="J2k-rX-qf5" userLabel="Account Button">
                                         <rect key="frame" x="207" y="4" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -66,14 +53,32 @@
                                             <action selector="onTrendingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4g-Uy-jeN"/>
                                         </connections>
                                     </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nFg-s8-DeE" userLabel="Compose Button">
+                                        <rect key="frame" x="135" y="4" width="50" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="compose_button"/>
+                                        <connections>
+                                            <action selector="onComposeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nRr-CX-GOj"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.25882352941176467" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="db9-8x-WxR" userLabel="Home View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="nGl-6D-Mc0" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="contentView" destination="nGl-6D-Mc0" id="RgT-9l-M1S"/>
+                        <outlet property="homeView" destination="db9-8x-WxR" id="u9S-1s-RFq"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -88,36 +93,36 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="cbY-3c-dpP">
+                            <view contentMode="scaleToFill" id="cbY-3c-dpP" userLabel="Animation View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="quote_icon" id="mtr-BQ-sk1">
-                                        <rect key="frame" x="224" y="159" width="75" height="95"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="text_icon" id="26M-tu-xsQ">
-                                        <rect key="frame" x="19" y="159" width="75" height="95"/>
+                                        <rect key="frame" x="19" y="160" width="75" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="photo_icon" id="8c3-B9-rli">
-                                        <rect key="frame" x="123" y="159" width="75" height="95"/>
+                                        <rect key="frame" x="123" y="160" width="75" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="link_icon" id="0vr-AW-E48">
-                                        <rect key="frame" x="19" y="279" width="75" height="95"/>
+                                        <rect key="frame" x="19" y="280" width="75" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="chat_icon" id="yGu-1M-ydn">
-                                        <rect key="frame" x="123" y="279" width="75" height="95"/>
+                                        <rect key="frame" x="123" y="280" width="75" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="video_icon" id="AqP-wH-7dS">
-                                        <rect key="frame" x="224" y="279" width="75" height="95"/>
+                                        <rect key="frame" x="224" y="280" width="75" height="95"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="quote_icon" id="mtr-BQ-sk1">
+                                        <rect key="frame" x="224" y="160" width="75" height="95"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.20784313725490194" green="0.27843137254901962" blue="0.36078431372549019" alpha="0.69999999999999996" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" red="0.0" green="0.19936258060271086" blue="0.36078431372549019" alpha="0.79655172413793107" colorSpace="calibratedRGB"/>
                             </view>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="qKq-OE-JD8">
                                 <rect key="frame" x="0.0" y="518" width="320" height="50"/>
@@ -126,10 +131,22 @@
                                 <state key="normal" title="Nevermind">
                                     <color key="titleColor" red="0.43529411764705883" green="0.48627450980392156" blue="0.52941176470588236" alpha="1" colorSpace="calibratedRGB"/>
                                 </state>
+                                <connections>
+                                    <action selector="nevermindButton:" destination="QIP-4J-YJD" eventType="touchUpInside" id="Hdr-Qz-6Tc"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="animationView" destination="cbY-3c-dpP" id="Xe9-j0-8Kx"/>
+                        <outlet property="chatImageView" destination="yGu-1M-ydn" id="lUa-Gz-EX7"/>
+                        <outlet property="linkImageView" destination="0vr-AW-E48" id="qER-eC-bsP"/>
+                        <outlet property="photoImageView" destination="8c3-B9-rli" id="Deh-Al-g4T"/>
+                        <outlet property="quoteImageView" destination="mtr-BQ-sk1" id="mpk-F3-gUC"/>
+                        <outlet property="textImageView" destination="26M-tu-xsQ" id="pb2-a4-zvR"/>
+                        <outlet property="videoImageView" destination="AqP-wH-7dS" id="AII-5k-i7v"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="9ZD-cz-gDT" sceneMemberID="firstResponder"/>
             </objects>
@@ -220,7 +237,7 @@
                                 <rect key="frame" x="0.0" y="274" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" style="gray" id="16G-vk-LNB">
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="gray" id="16G-vk-LNB">
                                 <rect key="frame" x="150" y="252" width="20" height="20"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                             </activityIndicatorView>
