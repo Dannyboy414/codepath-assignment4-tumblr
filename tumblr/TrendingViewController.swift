@@ -10,6 +10,7 @@ import UIKit
 
 class TrendingViewController: UIViewController, UIScrollViewDelegate {
     @IBOutlet weak var scrollView: UIScrollView!
+    
 
     override func viewDidLoad() {
         super.viewDidLoad()

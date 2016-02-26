@@ -13,38 +13,58 @@
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <view contentMode="scaleToFill" id="Sdp-3M-IZK" userLabel="Tab View">
+                            <view contentMode="scaleToFill" id="nGl-6D-Mc0" userLabel="Content View">
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.80000001190000003" green="0.80000001190000003" blue="0.80000001190000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </view>
+                            <view contentMode="scaleToFill" id="Sdp-3M-IZK" userLabel="Tab Bar View">
                                 <rect key="frame" x="0.0" y="525" width="320" height="44"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nFg-s8-DeE" userLabel="Compose Button">
-                                        <rect key="frame" x="135" y="4" width="50" height="35"/>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZoT-4b-JUP" userLabel="Search Button">
+                                        <rect key="frame" x="78" y="4" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="compose_button"/>
+                                        <state key="normal" image="search_icon"/>
+                                        <state key="selected" image="search_selected_icon"/>
+                                        <connections>
+                                            <action selector="onSearchButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="fSg-Pw-ULu"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="CYU-oC-1lF" userLabel="Home Button">
                                         <rect key="frame" x="19" y="4" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="home_icon"/>
                                         <state key="selected" image="home_selected_icon"/>
+                                        <connections>
+                                            <action selector="onHomeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="B45-vf-bVB"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="nFg-s8-DeE" userLabel="Compose Button">
+                                        <rect key="frame" x="135" y="4" width="50" height="35"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <state key="normal" image="compose_button"/>
+                                        <connections>
+                                            <action selector="onComposeButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="nRr-CX-GOj"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="J2k-rX-qf5" userLabel="Account Button">
                                         <rect key="frame" x="207" y="4" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="account_icon"/>
                                         <state key="selected" image="account_selected_icon"/>
+                                        <connections>
+                                            <action selector="onAccountButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="N1q-IO-QaP"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="5mj-SJ-Dwl" userLabel="Trending Button">
                                         <rect key="frame" x="266" y="4" width="35" height="35"/>
                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                         <state key="normal" image="trending_icon"/>
                                         <state key="selected" image="trending_selected_icon"/>
-                                    </button>
-                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" id="ZoT-4b-JUP" userLabel="Search Button">
-                                        <rect key="frame" x="78" y="4" width="35" height="35"/>
-                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                        <state key="normal" image="search_icon"/>
-                                        <state key="selected" image="search_selected_icon"/>
+                                        <connections>
+                                            <action selector="onTrendingButton:" destination="BYZ-38-t0r" eventType="touchUpInside" id="y4g-Uy-jeN"/>
+                                        </connections>
                                     </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.20000000000000001" green="0.25882352941176467" blue="0.33725490196078434" alpha="1" colorSpace="calibratedRGB"/>
@@ -52,6 +72,9 @@
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="contentView" destination="nGl-6D-Mc0" id="RgT-9l-M1S"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
@@ -60,7 +83,7 @@
         <!--Compose View Controller-->
         <scene sceneID="LHC-vO-Ne7">
             <objects>
-                <viewController id="QIP-4J-YJD" userLabel="Compose View Controller" customClass="ComposeViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ComposeViewController" id="QIP-4J-YJD" userLabel="Compose View Controller" customClass="ComposeViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="5IO-Ae-iHf">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -115,13 +138,13 @@
         <!--Account View Controller-->
         <scene sceneID="SLc-Gt-y7I">
             <objects>
-                <viewController id="m6i-gE-Jcl" userLabel="Account View Controller" customClass="AccountViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="AccountViewController" id="m6i-gE-Jcl" userLabel="Account View Controller" customClass="AccountViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="MVj-dZ-frs">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="account" id="7sh-yH-WWd">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
                                 <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                             </imageView>
                         </subviews>
@@ -135,13 +158,13 @@
         <!--Search View Controller-->
         <scene sceneID="PB6-PQ-Dd7">
             <objects>
-                <viewController id="LGh-ns-qgH" userLabel="Search View Controller" customClass="SearchViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="SearchViewController" id="LGh-ns-qgH" userLabel="Search View Controller" customClass="SearchViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="Flc-MA-d1C">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="search_feed" id="Eb8-2x-b5i">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                         </subviews>
@@ -155,13 +178,13 @@
         <!--Trending View Controller-->
         <scene sceneID="nzq-5U-9Th">
             <objects>
-                <viewController id="8XV-2f-Csf" userLabel="Trending View Controller" customClass="TrendingViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="TrendingViewController" id="8XV-2f-Csf" userLabel="Trending View Controller" customClass="TrendingViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="uxb-aV-H8f">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" id="wbN-uG-0b3">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <subviews>
                                     <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="trending_feed" id="ev8-2Q-h8V">
@@ -184,13 +207,13 @@
         <!--Home View Controller-->
         <scene sceneID="8jW-7B-FlG">
             <objects>
-                <viewController id="SWU-fU-Bxg" userLabel="Home View Controller" customClass="HomeViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HomeViewController" id="SWU-fU-Bxg" userLabel="Home View Controller" customClass="HomeViewController" customModule="tumblr" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="39n-50-gFP">
                         <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="home" id="6vQ-5t-Y5m">
-                                <rect key="frame" x="0.0" y="0.0" width="320" height="524"/>
+                                <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
                             <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" image="home_overlay" id="jvH-Bh-nAd">
