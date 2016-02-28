@@ -15,7 +15,7 @@ class TrendingViewController: UIViewController, UIScrollViewDelegate {
     override func viewDidLoad() {
         super.viewDidLoad()
         scrollView.delegate = self
-        self.scrollView.contentSize = CGSize(width: 320, height: 1217)
+        self.scrollView.contentSize = CGSize(width: 320, height: 1227)
         
         // Do any additional setup after loading the view.
     }

@@ -10,11 +10,11 @@ import UIKit
 
 class TabViewController: UIViewController {
 
-    @IBOutlet weak var homeView: UIView!
+    @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var contentView: UIView!
-
-    var homeViewController: UIViewController!
+    
     var searchViewController: UIViewController!
+    var homeViewController: UIViewController!
     var composeViewController: UIViewController!
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
@@ -26,19 +26,18 @@ class TabViewController: UIViewController {
         let storyboard = UIStoryboard(name: "Main", bundle: nil)
         
         homeViewController = storyboard.instantiateViewControllerWithIdentifier("HomeViewController") as! HomeViewController
-            addChildViewController(homeViewController)
-            homeView.addSubview(homeViewController.view)
-            homeViewController.didMoveToParentViewController(self)
-            homeViewController.view.frame = contentView.frame
         
         searchViewController = storyboard.instantiateViewControllerWithIdentifier("SearchViewController") as! SearchViewController
+            addChildViewController(searchViewController)
+            searchView.addSubview(searchViewController.view)
+            searchViewController.didMoveToParentViewController(self)
+            searchViewController.view.frame = contentView.frame
         
-        composeViewController =
-            storyboard.instantiateViewControllerWithIdentifier("ComposeViewController") as! ComposeViewController
-        accountViewController =
-            storyboard.instantiateViewControllerWithIdentifier("AccountViewController") as! AccountViewController
-        trendingViewController =
-            storyboard.instantiateViewControllerWithIdentifier("TrendingViewController") as! TrendingViewController
+        composeViewController = storyboard.instantiateViewControllerWithIdentifier("ComposeViewController") as! ComposeViewController
+       
+        accountViewController = storyboard.instantiateViewControllerWithIdentifier("AccountViewController") as! AccountViewController
+        
+        trendingViewController = storyboard.instantiateViewControllerWithIdentifier("TrendingViewController") as! TrendingViewController
 
         // Do any additional setup after loading the view.
     }
