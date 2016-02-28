@@ -25,6 +25,15 @@ class ComposeViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+    }
+
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        animateIcons()
+    }
+    
+    func animateIcons() {
         //animation icons
         self.textImageView.center.y = 500
         self.textImageView.alpha = 0
@@ -58,12 +67,7 @@ class ComposeViewController: UIViewController {
             self.videoImageView.alpha = 1
             
         }
-        
-        // Do any additional setup after loading the view.
     }
-
-    
-    
     
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()

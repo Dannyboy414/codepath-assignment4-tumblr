@@ -53,8 +53,8 @@ class TabViewController: UIViewController {
     }
     
     @IBAction func onComposeButton(sender: AnyObject) {
-        composeViewController.view.frame = contentView.frame
-        contentView.addSubview(composeViewController.view)
+//        composeViewController.view.frame = contentView.frame
+        presentViewController(composeViewController, animated: true, completion: nil)
     }
     
     @IBAction func onAccountButton(sender: AnyObject) {
