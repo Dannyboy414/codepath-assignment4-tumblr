@@ -72,19 +72,18 @@
                             <view contentMode="scaleToFill" id="nGl-6D-Mc0" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <subviews>
-                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="LxL-Wa-yIn">
-                                        <rect key="frame" x="0.0" y="447" width="185" height="77"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                    </imageView>
-                                </subviews>
                             </view>
+                            <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="LxL-Wa-yIn">
+                                <rect key="frame" x="0.0" y="460" width="185" height="77"/>
+                                <autoresizingMask key="autoresizingMask"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
                         <outlet property="accountButton" destination="J2k-rX-qf5" id="i9m-XD-1mT"/>
                         <outlet property="contentView" destination="nGl-6D-Mc0" id="RgT-9l-M1S"/>
+                        <outlet property="exploreBubble" destination="LxL-Wa-yIn" id="5LI-6k-6uQ"/>
                         <outlet property="homeButton" destination="CYU-oC-1lF" id="Edl-01-Fyb"/>
                         <outlet property="searchButton" destination="ZoT-4b-JUP" id="qEv-Ub-v3G"/>
                         <outlet property="searchView" destination="db9-8x-WxR" id="D10-YI-kPV"/>

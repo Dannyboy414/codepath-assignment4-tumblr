@@ -25,6 +25,8 @@ class TabViewController: UIViewController {
     @IBOutlet weak var accountButton: UIButton!
     @IBOutlet weak var trendingButton: UIButton!
     
+    @IBOutlet weak var exploreBubble: UIImageView!
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -47,11 +49,30 @@ class TabViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    override func viewWillAppear(animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        UIView.animateKeyframesWithDuration(1.0, delay: 0.5, options: .Repeat, animations: { () -> Void in
+            var originalBubbleFrame = self.exploreBubble.frame
+            var raisedBubbleFrame = originalBubbleFrame
+            raisedBubbleFrame.origin.y = raisedBubbleFrame.origin.y - 2
+            
+            UIView.addKeyframeWithRelativeStartTime(0.0, relativeDuration: 0.5, animations: { () -> Void in
+                self.exploreBubble.frame = raisedBubbleFrame
+            })
+            UIView.addKeyframeWithRelativeStartTime(0.5, relativeDuration: 0.5, animations: { () -> Void in
+                self.exploreBubble.frame = originalBubbleFrame
+            })
+            }, completion: nil)
+    }
+    
     func clearButtons() {
         searchButton.selected = false
         homeButton.selected = false
         accountButton.selected = false
         trendingButton.selected = false
+        
+        exploreBubble.hidden = false
     }
     
     @IBAction func onHomeButton(sender: UIButton) {
@@ -70,6 +91,8 @@ class TabViewController: UIViewController {
         clearButtons()
         
         sender.selected = true
+        
+        exploreBubble.hidden = true
     }
     
     @IBAction func onComposeButton(sender: UIButton) {
