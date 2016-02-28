@@ -9,6 +9,10 @@
 import UIKit
 
 class HomeViewController: UIViewController {
+    @IBOutlet weak var loginView: UIView!
+    @IBAction func cancelButton(sender: AnyObject) {
+        self.loginView.hidden = true
+    }
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -19,6 +23,10 @@ class HomeViewController: UIViewController {
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
+    }
+    
+    @IBAction func loginButton(sender: AnyObject) {
+        self.loginView.hidden = false
     }
     
 

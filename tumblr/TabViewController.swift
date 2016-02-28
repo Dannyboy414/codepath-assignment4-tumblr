@@ -12,6 +12,7 @@ class TabViewController: UIViewController {
 
     @IBOutlet weak var searchView: UIView!
     @IBOutlet weak var contentView: UIView!
+    @IBOutlet weak var tabBarView: UIView!
     
     var searchViewController: UIViewController!
     var homeViewController: UIViewController!
@@ -19,6 +20,10 @@ class TabViewController: UIViewController {
     var accountViewController: UIViewController!
     var trendingViewController: UIViewController!
     
+    @IBOutlet weak var searchButton: UIButton!
+    @IBOutlet weak var homeButton: UIButton!
+    @IBOutlet weak var accountButton: UIButton!
+    @IBOutlet weak var trendingButton: UIButton!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,29 +47,52 @@ class TabViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
-    @IBAction func onHomeButton(sender: AnyObject) {
+    func clearButtons() {
+        searchButton.selected = false
+        homeButton.selected = false
+        accountButton.selected = false
+        trendingButton.selected = false
+    }
+    
+    @IBAction func onHomeButton(sender: UIButton) {
         homeViewController.view.frame = contentView.frame
         contentView.addSubview(homeViewController.view)
+        
+        clearButtons()
+        
+        sender.selected = true
+
     }
 
-    @IBAction func onSearchButton(sender: AnyObject) {
+    @IBAction func onSearchButton(sender: UIButton) {
         searchViewController.view.frame = contentView.frame
         contentView.addSubview(searchViewController.view)
+        clearButtons()
+        
+        sender.selected = true
     }
     
-    @IBAction func onComposeButton(sender: AnyObject) {
+    @IBAction func onComposeButton(sender: UIButton) {
 //        composeViewController.view.frame = contentView.frame
-        presentViewController(composeViewController, animated: true, completion: nil)
+        
+        self.modalPresentationStyle = .CurrentContext
+        self.presentViewController(composeViewController, animated: true, completion: nil)
     }
     
-    @IBAction func onAccountButton(sender: AnyObject) {
+    @IBAction func onAccountButton(sender: UIButton) {
         accountViewController.view.frame = contentView.frame
         contentView.addSubview(accountViewController.view)
+        clearButtons()
+        
+        sender.selected = true
     }
     
-    @IBAction func onTrendingButton(sender: AnyObject) {
+    @IBAction func onTrendingButton(sender: UIButton) {
         trendingViewController.view.frame = contentView.frame
         contentView.addSubview(trendingViewController.view)
+        clearButtons()
+        
+        sender.selected = true
     }
     
     

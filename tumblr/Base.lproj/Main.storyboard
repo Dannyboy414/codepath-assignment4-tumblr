@@ -72,13 +72,24 @@
                             <view contentMode="scaleToFill" id="nGl-6D-Mc0" userLabel="Content View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <subviews>
+                                    <imageView opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" image="explore_popup" id="LxL-Wa-yIn">
+                                        <rect key="frame" x="0.0" y="447" width="185" height="77"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                    </imageView>
+                                </subviews>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
                     <connections>
+                        <outlet property="accountButton" destination="J2k-rX-qf5" id="i9m-XD-1mT"/>
                         <outlet property="contentView" destination="nGl-6D-Mc0" id="RgT-9l-M1S"/>
+                        <outlet property="homeButton" destination="CYU-oC-1lF" id="Edl-01-Fyb"/>
+                        <outlet property="searchButton" destination="ZoT-4b-JUP" id="qEv-Ub-v3G"/>
                         <outlet property="searchView" destination="db9-8x-WxR" id="D10-YI-kPV"/>
+                        <outlet property="tabBarView" destination="Sdp-3M-IZK" id="x3S-X5-Vdh"/>
+                        <outlet property="trendingButton" destination="5mj-SJ-Dwl" id="kB0-9K-0Gs"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -133,10 +144,10 @@
                                         <autoresizingMask key="autoresizingMask"/>
                                     </imageView>
                                 </subviews>
-                                <color key="backgroundColor" red="0.0" green="0.19936258060271086" blue="0.36078431372549019" alpha="0.79261853448275865" colorSpace="calibratedRGB"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </view>
                         </subviews>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <color key="backgroundColor" red="0.0" green="0.19936258060000001" blue="0.36078431370000003" alpha="0.79261853449999997" colorSpace="calibratedRGB"/>
                     </view>
                     <connections>
                         <outlet property="animationView" destination="cbY-3c-dpP" id="Xe9-j0-8Kx"/>
@@ -262,6 +273,13 @@
                                 <rect key="frame" x="0.0" y="274" width="320" height="100"/>
                                 <autoresizingMask key="autoresizingMask"/>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="FJg-bF-5ZM" userLabel="login button">
+                                <rect key="frame" x="254" y="24" width="66" height="39"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <connections>
+                                    <action selector="loginButton:" destination="SWU-fU-Bxg" eventType="touchUpInside" id="roT-f2-KsD"/>
+                                </connections>
+                            </button>
                             <view hidden="YES" contentMode="scaleToFill" id="GbJ-1z-uxa" userLabel="Login View">
                                 <rect key="frame" x="0.0" y="0.0" width="320" height="526"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
@@ -284,12 +302,22 @@
                                         <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                         <textInputTraits key="textInputTraits" secureTextEntry="YES"/>
                                     </textField>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" id="j6L-On-0ch" userLabel="cancel button">
+                                        <rect key="frame" x="8" y="245" width="152" height="41"/>
+                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                        <connections>
+                                            <action selector="cancelButton:" destination="SWU-fU-Bxg" eventType="touchUpInside" id="Xn6-nM-vnh"/>
+                                        </connections>
+                                    </button>
                                 </subviews>
                                 <color key="backgroundColor" red="0.18823529411764706" green="0.27450980392156865" blue="0.36078431372549019" alpha="0.89595905172413792" colorSpace="calibratedRGB"/>
                             </view>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
                     </view>
+                    <connections>
+                        <outlet property="loginView" destination="GbJ-1z-uxa" id="mdf-jw-NOC"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="2HJ-4J-X6o" sceneMemberID="firstResponder"/>
             </objects>
@@ -302,6 +330,7 @@
         <image name="account_selected_icon" width="35" height="35"/>
         <image name="chat_icon" width="75" height="96"/>
         <image name="compose_button" width="50" height="35"/>
+        <image name="explore_popup" width="185" height="77"/>
         <image name="home" width="320" height="524"/>
         <image name="home_icon" width="35" height="35"/>
         <image name="home_overlay" width="320" height="100"/>
